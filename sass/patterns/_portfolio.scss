@@ -1,0 +1,92 @@
+/* GR ------ PORTFOLIO STYLE ------- */
+
+        /* .portfolio__group .container{
+            display: flex;
+            
+        } */
+
+        .portfolio__group {
+            /* display: flex;
+            flex-wrap: wrap;
+            justify-content: center; */
+            display: grid;
+            --cols: 3;
+            grid-template-columns: repeat(var(--cols),1fr);
+        }
+        
+        .portfolio {
+            width: 20rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            /* box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1); */
+            box-shadow: 0 .25rem 0.6rem var(--color-shadow-light);
+            background-color: white;
+            position:relative; 
+            overflow: hidden;
+        }
+        
+        .portfolio img {
+            width: 100%;
+        }
+        
+        .portfolio__info {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 1rem;
+            letter-spacing: 0.5px;
+        }
+        .portfolio__group h2 {
+            color: var(--color-primary);
+        }
+        .portfolio__info h3 {
+            margin-top: 0;
+            color: var(--color-primary);
+        }
+        
+        .portfolio__info span {
+            background-color: var(--color-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .portfolio__tech {
+            color:var(--color-secondary-pale);
+        }
+
+        .portfolio_link,
+        .portfolio_link:hover,
+        .portfolio_link:focus {
+            text-decoration: none;
+            text-transform: none;
+            color: var(--color-primary);
+        }
+
+        .portfolio__info span.green {
+            color: lightgreen;
+        }
+        .portfolio__info span.orange {
+            color: orange;
+        }
+        .portfolio__info span.red {
+            color: red;
+        }
+        
+        .overview {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            padding: 1rem;
+            max-height: 100%;
+            transform: translateY(101%);
+            transition: transform 0.3s ease-in;
+        }
+        
+        .portfolio:hover .overview,
+        .portfolio:focus .overview {
+            transform: translateY(0);
+        }
