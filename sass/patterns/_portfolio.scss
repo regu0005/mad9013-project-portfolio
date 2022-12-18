@@ -1,16 +1,8 @@
 /* GR ------ PORTFOLIO STYLE ------- */
 
-        /* .portfolio__group .container{
-            display: flex;
-            
-        } */
-
         .portfolio__group {
-            /* display: flex;
-            flex-wrap: wrap;
-            justify-content: center; */
             display: grid;
-            --cols: 3;
+            --cols: 1;
             grid-template-columns: repeat(var(--cols),1fr);
         }
         
@@ -18,7 +10,6 @@
             width: 20rem;
             margin: 1rem;
             border-radius: 0.5rem;
-            /* box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1); */
             box-shadow: 0 .25rem 0.6rem var(--color-shadow-light);
             background-color: white;
             position:relative; 
@@ -89,4 +80,16 @@
         .portfolio:hover .overview,
         .portfolio:focus .overview {
             transform: translateY(0);
+        }
+
+        @media only screen and (min-width: 45em) {
+            .portfolio__group {
+                --cols: 2;
+            }
+        }
+          
+        @media only screen and (min-width: 60em) {
+            .portfolio__group {
+                --cols: 3;
+            }
         }

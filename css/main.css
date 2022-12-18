@@ -676,9 +676,6 @@ input[type=submit] {
   background-image: url("../images/contact-01.jpeg");
   background-size: 50%;
   background-size: cover;
-  /* background-position: center; */
-  /* border-radius: 1.5rem 0 0 1.5rem; */
-  /* box-shadow: 0 .25rem 1rem #0002; */
 }
 
 .form__title {
@@ -821,16 +818,9 @@ label {
 }
 
 /* GR ------ PORTFOLIO STYLE ------- */
-/* .portfolio__group .container{
-    display: flex;
-
-} */
 .portfolio__group {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   display: grid;
-  --cols: 3;
+  --cols: 1;
   grid-template-columns: repeat(var(--cols), 1fr);
 }
 
@@ -838,7 +828,6 @@ label {
   width: 20rem;
   margin: 1rem;
   border-radius: 0.5rem;
-  /* box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1); */
   box-shadow: 0 0.25rem 0.6rem var(--color-shadow-light);
   background-color: white;
   position: relative;
@@ -915,6 +904,16 @@ label {
   transform: translateY(0);
 }
 
+@media only screen and (min-width: 45em) {
+  .portfolio__group {
+    --cols: 2;
+  }
+}
+@media only screen and (min-width: 60em) {
+  .portfolio__group {
+    --cols: 3;
+  }
+}
 /* GR ---------- Skills Style ---------- */
 .skills-group {
   background-color: white;
@@ -963,23 +962,12 @@ label {
   box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.1333333333);
 }
 
-/* .skills__image img { */
-/* object-fit: cover; */
-/* width: 100%; */
-/* height: 100%; */
-/* aspect-ratio: 16 / 9; */
-/* } */
 .skills__image {
-  /* display: block; */
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%;
-  /* width: 30rem; */
-  /* height: 15rem; */
   vertical-align: middle;
-  /* align-content: center;
-  align-items: center; */
   white-space: nowrap;
 }
 
@@ -988,14 +976,8 @@ label {
   bottom: 0;
   left: 0;
   margin: auto;
-  /* max-height: 90%; */
-  /* max-width: 90%; */
   position: absolute;
-  /* width: auto; */
-  /* max-height: 25rem; */
   max-width: 10rem;
-  /* position: inherit; */
-  /* margin-right: 2rem; */
   right: 0;
   top: 0;
 }
